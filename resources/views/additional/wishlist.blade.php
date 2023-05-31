@@ -17,7 +17,7 @@
                 <div class="breadcrumb-content text-center">
                     <h2>Wishlist</h2>
                     <ul>
-                        <li><a href="index.blade.php">home</a></li>
+                        <li><a href="../food-shop/index.blade.php">home</a></li>
                         <li class="active">Wishlist</li>
                     </ul>
                 </div>

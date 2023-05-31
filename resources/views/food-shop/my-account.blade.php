@@ -85,6 +85,75 @@
                         </div>
                     </div>
                 </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h5 class="panel-title"><span>2</span> <a data-toggle="collapse" data-parent="#faq" href="#payment-2">History of Orders</a></h5>
+                    </div>
+                    <div id="payment-2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="order-review-wrapper">
+                                <div class="order-review">
+                                    <div class="table-responsive">
+                                        @foreach($orders as $order)
+                                            <table class="table">
+                                                <thead>
+                                                <tr>
+                                                    <th class="width-1">Product Name</th>
+                                                    <th class="width-2">Price</th>
+                                                    <th class="width-3">Qty</th>
+                                                    <th class="width-4">Subtotal</th>
+                                                </tr>
+                                                </thead>
+                                                @foreach($order->cart_data as $cart_data)
+                                                    <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="o-pro-dec">
+                                                                <p>{{$cart_data['name']}}</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="o-pro-price">
+                                                                <p>${{$cart_data['price']}}</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="o-pro-qty">
+                                                                <p>{{$cart_data['quantity']}}</p>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="o-pro-subtotal">
+                                                                <p>${{$cart_data['price']*$cart_data['quantity']}}</p>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                @endforeach
+                                                <tfoot>
+                                                <tr>
+                                                    <td colspan="3">Grand Total</td>
+                                                    <td colspan="1">${{$order->total_sum}}</td>
+                                                </tr>
+                                                </tfoot>
+                                            </table>
+                                        @endforeach
+                                    </div>
+                                    <div class="billing-back-btn">
+                                                        <span>
+                                                            Forgot an Item?
+                                                            <a href="#"> Edit Your Cart.</a>
+
+                                                        </span>
+                                        <div class="billing-btn">
+                                            <button type="submit">Continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     @include('layouts.footer')

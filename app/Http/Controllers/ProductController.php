@@ -162,10 +162,21 @@ class ProductController extends Controller
         \Cart::session($sessionId);
         $cart = \Cart::getContent();
         $sum = \Cart::getTotal('price');
+
+        $orders = Order::query()->where(['user_id'=>$user->getAuthIdentifier()])
+            ->orderBy('id','desc')->get();
+
+        $orders->transform(function ($order){
+            $order->cart_data = unserialize($order->cart_data);
+
+            return $order;
+        });
+
         return view('food-shop/my-account', [
             'cart' => $cart,
             'sum' => $sum,
             'user' => $user,
+            'orders' => $orders,
         ]);
     }
 

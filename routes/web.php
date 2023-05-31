@@ -16,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });*/
+
+Route::prefix('food-shop')->group(function () {
+    Route::get('/users', function () {
+        // Matches The "/admin/users" URL
+    });
+});
+
 Route::get('/', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
     ->name('food-shop/index');
 
