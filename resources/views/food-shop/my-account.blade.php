@@ -16,10 +16,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>My Account</h2>
+                    <h2>Мій аккаунт</h2>
                     <ul>
-                        <li><a href="{{route('food-shop/index')}}">home</a></li>
-                        <li class="active">My Account</li>
+                        <li><a href="{{route('food-shop/index')}}">Головна</a></li>
+                        <li class="active">Аккаунт</li>
                     </ul>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <div class="billing-btn">
                         @csrf
                         <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900">
-                            {{ __('Log Out') }}
+                            {{ __('Вийти') }}
                         </button>
                     </div>
                 </form>
@@ -42,39 +42,39 @@
                             <div id="faq" class="panel-group">
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h5 class="panel-title"><span>1</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1">Your account information </a></h5>
+                                        <h5 class="panel-title"><span>1</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1">Інформація про твій аккаунт: </a></h5>
                                     </div>
                                         @csrf
                                     <div id="my-account-1" class="panel-collapse collapse show">
                                         <div class="panel-body">
                                             <div class="billing-information-wrapper">
                                                 <div class="account-info-wrapper">
-                                                    <h4>My Account Information</h4>
-                                                    <h5>Your Personal Details</h5>
+                                                    <h4>Інформація про мій аккаунт</h4>
+                                                    <h5>Ваші персональні дані:</h5>
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Name</label>
+                                                            <label>Ім'я</label>
                                                             <input type="text" value="{{$user->name}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-6 col-md-6">
                                                         <div class="billing-info">
-                                                            <label>Email</label>
+                                                            <label>Email пошта</label>
                                                             <input type="text" value="{{$user->email}}">
                                                         </div>
                                                     </div>
                                                     <div class="col-lg-12 col-md-12">
                                                         <div class="billing-info">
-                                                            <label>Password</label>
+                                                            <label>Зашифрований пароль</label>
                                                             <input type="password" value="{{$user->password}}">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="billing-back-btn">
                                                     <div class="billing-back">
-                                                        <a href="#"><i class="ti-arrow-up"></i> back</a>
+                                                        <a href="#"><i class="ti-arrow-up"></i> назад</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -87,7 +87,7 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h5 class="panel-title"><span>2</span> <a data-toggle="collapse" data-parent="#faq" href="#payment-2">History of Orders</a></h5>
+                        <h5 class="panel-title"><span>2</span> <a data-toggle="collapse" data-parent="#faq" href="#payment-2">Історія замовлень</a></h5>
                     </div>
                     <div id="payment-2" class="panel-collapse collapse">
                         <div class="panel-body">
@@ -98,10 +98,10 @@
                                             <table class="table">
                                                 <thead>
                                                 <tr>
-                                                    <th class="width-1">Product Name</th>
-                                                    <th class="width-2">Price</th>
-                                                    <th class="width-3">Qty</th>
-                                                    <th class="width-4">Subtotal</th>
+                                                    <th class="width-1">Назва страви</th>
+                                                    <th class="width-2">Ціна</th>
+                                                    <th class="width-3">К-ть</th>
+                                                    <th class="width-4">Вартість</th>
                                                 </tr>
                                                 </thead>
                                                 @foreach($order->cart_data as $cart_data)
@@ -114,7 +114,7 @@
                                                         </td>
                                                         <td>
                                                             <div class="o-pro-price">
-                                                                <p>${{$cart_data['price']}}</p>
+                                                                <p>{{$cart_data['price']}}₴</p>
                                                             </div>
                                                         </td>
                                                         <td>
@@ -124,7 +124,7 @@
                                                         </td>
                                                         <td>
                                                             <div class="o-pro-subtotal">
-                                                                <p>${{$cart_data['price']*$cart_data['quantity']}}</p>
+                                                                <p>{{$cart_data['price']*$cart_data['quantity']}}₴</p>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -132,22 +132,12 @@
                                                 @endforeach
                                                 <tfoot>
                                                 <tr>
-                                                    <td colspan="3">Grand Total</td>
-                                                    <td colspan="1">${{$order->total_sum}}</td>
+                                                    <td colspan="3">Загальна вартість</td>
+                                                    <td colspan="1">{{$order->total_sum}}₴</td>
                                                 </tr>
                                                 </tfoot>
                                             </table>
                                         @endforeach
-                                    </div>
-                                    <div class="billing-back-btn">
-                                                        <span>
-                                                            Forgot an Item?
-                                                            <a href="#"> Edit Your Cart.</a>
-
-                                                        </span>
-                                        <div class="billing-btn">
-                                            <button type="submit">Continue</button>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

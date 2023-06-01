@@ -15,10 +15,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>Login / Register</h2>
+                    <h2>Логін / Реєстрація</h2>
                     <ul>
-                        <li><a href="{{route('food-shop/index')}}">home</a></li>
-                        <li class="active">Login / Register</li>
+                        <li><a href="{{route('food-shop/index')}}">Головна</a></li>
+                        <li class="active">Логін / Реєстрація</li>
                     </ul>
                 </div>
             </div>
@@ -38,10 +38,10 @@
                         <div class="login-register-wrapper">
                             <div class="login-register-tab-list nav">
                                 <a class="active" data-toggle="tab" href="#lg1">
-                                    <h4> login </h4>
+                                    <h4> логін </h4>
                                 </a>
                                 <a data-toggle="tab" href="#lg2">
-                                    <h4> register </h4>
+                                    <h4> реєстрація </h4>
                                 </a>
                             </div>
                             <div class="tab-content">

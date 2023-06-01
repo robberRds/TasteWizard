@@ -15,10 +15,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>About Us</h2>
+                    <h2>Про нас</h2>
                     <ul>
-                        <li><a href="{{route('food-shop/index')}}">home</a></li>
-                        <li class="active">About Us</li>
+                        <li><a href="{{route('food-shop/index')}}">Головна</a></li>
+                        <li class="active">Про нас</li>
                     </ul>
                 </div>
             </div>
@@ -33,7 +33,7 @@
                     </div>
                     <div class="col-lg-6 col-md-6 d-flex align-items-center">
                         <div class="about-us-content">
-                            <h2>About IrBali</h2>
+                            <h2>Про IrBali</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipis elit, sed do eiusmod tempor incididu ut labore et dolore magna aliqua. Ut enim ad minim  quis nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             <div class="about-us-list">
                                 <ul>
@@ -43,7 +43,7 @@
                                 </ul>
                             </div>
                             <div class="about-us-btn">
-                                <a class="btn-style" href="{{route('food-shop/contact')}}">CONTACT US</a>
+                                <a class="btn-style" href="{{route('food-shop/contact')}}">Контакти</a>
                             </div>
                         </div>
                     </div>
@@ -56,25 +56,25 @@
                     <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="single-count mb-30 text-center">
                             <h2 class="count">2</h2>
-                            <span>Years in Business</span>
+                            <span>Років бізнесу</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="single-count mb-30 text-center">
-                            <h2 class="count">9043</h2>
-                            <span>Happy People</span>
+                            <h2 class="count">1443</h2>
+                            <span>Задоволених покупців</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="single-count mb-30 text-center">
-                            <h2 class="count">58022</h2>
-                            <span>Sales</span>
+                            <h2 class="count">8022</h2>
+                            <span>Продажів</span>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="single-count mb-30 text-center">
                             <h2 class="count">3</h2>
-                            <span>Award Winning</span>
+                            <span>Виграно нагород</span>
                         </div>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
 		<div class="team-ara pt-95 pb-70">
             <div class="container">
                 <div class="section-title text-center mb-55">
-                    <h2>Our Team</h2>
+                    <h2>Наша команда</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing</p>
                 </div>
                 <div class="row">
@@ -111,7 +111,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Ihor Bali</h4>
-                                <span>Customer </span>
+                                <span>Замовник </span>
                             </div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Ihor Bali</h4>
-                                <span>Manager </span>
+                                <span>Менеджер </span>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Ihor Bali</h4>
-                                <span>Customer </span>
+                                <span>Розробник </span>
                             </div>
                         </div>
                     </div>
@@ -192,7 +192,7 @@
                             </div>
                             <div class="team-content text-center">
                                 <h4>Ihor Bali</h4>
-                                <span>Manager </span>
+                                <span>Дизайнер </span>
                             </div>
                         </div>
                     </div>

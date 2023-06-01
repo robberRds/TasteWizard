@@ -11,36 +11,36 @@
                     <div class="main-menu text-center">
                         <nav>
                             <ul>
-                                <li><a href="{{route('food-shop/index')}}">HOME</a></li>
-                                <li class="mega-menu-position"><a href="{{route('food-shop/shop-page')}}">Menu</a>
+                                <li><a href="{{route('food-shop/index')}}">ГОЛОВНА</a></li>
+                                <li class="mega-menu-position"><a href="{{route('food-shop/shop-page')}}">Меню</a>
                                 </li>
-                                <li><a href="#">PAGES</a>
+                                <li><a href="#">Сторінки</a>
                                     <ul class="submenu">
                                         <li>
-                                            <a href="{{route('food-shop/index')}}">Home</a>
+                                            <a href="{{route('food-shop/index')}}">Головна</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/shop-page')}}">Menu</a>
+                                            <a href="{{route('food-shop/shop-page')}}">Меню</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/about')}}">About</a>
+                                            <a href="{{route('food-shop/about')}}">Про нас</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/contact')}}">Contact us</a>
+                                            <a href="{{route('food-shop/contact')}}">Контакти</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/my-account')}}">My account</a>
+                                            <a href="{{route('food-shop/my-account')}}">Кабінет</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/checkout')}}">Checkout</a>
+                                            <a href="{{route('food-shop/checkout')}}">Замовлення</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('voyager.dashboard')}}">Admin</a>
+                                            <a href="{{route('voyager.dashboard')}}">Адмін панель</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="{{route('food-shop/about')}}">ABOUT</a></li>
-                                <li><a href="{{route('food-shop/contact')}}">contact us</a></li>
+                                <li><a href="{{route('food-shop/about')}}">ПРО НАС</a></li>
+                                <li><a href="{{route('food-shop/contact')}}">КОНТАКТИ</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -65,21 +65,22 @@
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h4><a href="#">{{$item->name}} </a></h4>
-                                                <h6>Qty: {{$item->quantity}}</h6>
-                                                <span>${{$item->price}}</span>
+                                                <h6>К-ть: {{$item->quantity}}</h6>
+                                                <span>{{$item->price}}₴</span>
                                             </div>
                                         </li>
                                     </ul>
                                 @endforeach
                                 <div class="shopping-cart-total">
-                                    <h4>Shipping : <span>Free</span></h4>
-                                    <h4>Total : <span class="shop-total">${{$sum}}</span></h4>
+                                    <h4>Доставка : <span>Безкоштовна</span></h4>
+                                    <h4>__________   <span>(від 350₴)</span></h4>
+                                    <h4>Сума : <span class="shop-total">₴{{$sum}}</span></h4>
                                 </div>
                                 <div class="shopping-cart-btn">
-                                    <a href="{{route('food-shop/checkout')}}">checkout</a>
+                                    <a href="{{route('food-shop/checkout')}}">Замовити</a>
                                 </div>
                                 <div class="shopping-cart-btn">
-                                    <a href="{{route('food-shop/delete-cart')}}">clear the basket</a>
+                                    <a href="{{route('food-shop/delete-cart')}}">Очистити кошик</a>
                                 </div>
                             </div>
                         </div>
@@ -89,35 +90,35 @@
                     <div class="mobile-menu">
                         <nav id="mobile-menu-active">
                             <ul class="menu-overflow">
-                                <li><a href="{{route('food-shop/index')}}">HOME</a></li>
-                                <li><a href="#">PAGES</a>
+                                <li><a href="{{route('food-shop/index')}}">ГОЛОВНА</a></li>
+                                <li><a href="#">Сторінки</a>
                                     <ul>
                                         <li>
-                                            <a href="{{route('food-shop/index')}}">Home</a>
+                                            <a href="{{route('food-shop/index')}}">Головна</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/shop-page')}}">Menu</a>
+                                            <a href="{{route('food-shop/shop-page')}}">Меню</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/about')}}">About</a>
+                                            <a href="{{route('food-shop/about')}}">Про нас</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/contact')}}">Contact us</a>
+                                            <a href="{{route('food-shop/contact')}}">Контакти</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/my-account')}}">My account</a>
+                                            <a href="{{route('food-shop/my-account')}}">Особистий кабінет</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('food-shop/checkout')}}">Checkout</a>
+                                            <a href="{{route('food-shop/checkout')}}">Замовлення</a>
                                         </li>
                                         <li>
-                                            <a href="{{route('voyager.dashboard')}}">Admin</a>
+                                            <a href="{{route('voyager.dashboard')}}">Адмін панель</a>
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="{{route('food-shop/shop-page')}}">Menu</a>
+                                <li><a href="{{route('food-shop/shop-page')}}">Меню</a>
                                 </li>
-                                <li><a href="{{route('food-shop/contact')}}"> Contact us </a></li>
+                                <li><a href="{{route('food-shop/contact')}}"> Контакти </a></li>
                             </ul>
                         </nav>
                     </div>

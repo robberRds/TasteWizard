@@ -15,10 +15,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>Shop Page</h2>
+                    <h2>Сторінка покупок</h2>
                     <ul>
-                        <li><a href="{{route("food-shop/index")}}">home</a></li>
-                        <li class="active">Shop Page</li>
+                        <li><a href="{{route("food-shop/index")}}">Головна</a></li>
+                        <li class="active">Меню</li>
                     </ul>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                         <div class="shop-topbar-wrapper">
                             <div class="product-sorting-wrapper">
                                 <div class="product-show shorting-style">
-                                    <label>Showing All Results</label>
+                                    <label>Страви на замовлення:</label>
                                 </div>
                             </div>
                             <div class="grid-list-options">
@@ -64,18 +64,18 @@
                                             <div class="product-content">
                                                 <h4><a href="{{route('food-shop/product-details', ['id'=>$product->id])}}">{{$product->name}}</a></h4>
                                                 <div class="product-price">
-                                                    <span>Ціна: {{$product->price}} </span>
+                                                    <span>Ціна: {{$product->price}}₴</span>
                                                 </div>
                                             </div>
                                             <div class="product-list-content">
                                                 <h4><a href="#">{{$product->name}}</a></h4>
                                                 <div class="product-price">
-                                                    <span class="new">{{$product->price}} </span>
+                                                    <span class="new">{{$product->price}}₴ </span>
                                                 </div>
                                                 <p>{{$product->description}}</p>
                                                 <div class="product-list-action">
                                                     <div class="product-list-action-left">
-                                                        <a class="addtocart-btn" title="Add to cart" href="{{route('food-shop/add-cart', ['id'=>$product->id, 'sold'=>$product->sold])}}"><i class="ion-bag"></i> Add to cart</a>
+                                                        <a class="addtocart-btn" title="Add to cart" href="{{route('food-shop/add-cart', ['id'=>$product->id, 'sold'=>$product->sold])}}"><i class="ion-bag"></i> Добавити в корзину</a>
                                                     </div>
                                                     <div class="product-list-action-right">
                                                         <a title="Wishlist" href="#"><i class="ti-heart"></i></a>
@@ -95,11 +95,11 @@
                     <div class="col-lg-3">
                         <div class="shop-sidebar">
                             <div class="shop-widget">
-                                <h4 class="shop-sidebar-title">Search Products</h4>
+                                <h4 class="shop-sidebar-title">Пошук продуктів</h4>
                                 <div class="shop-search mt-25 mb-50">
                                     <form class="shop-search-form " method="post" action="{{route('food-shop/search')}}">
                                         @csrf
-                                        <input name="name" type="text" placeholder="Find a product">
+                                        <input name="name" type="text" placeholder="Знайти...">
                                         <button type="submit">
                                             <i class="icon-magnifier"></i>
                                         </button>
@@ -107,15 +107,15 @@
                                 </div>
                             </div>
                             <div class="shop-widget mt-50">
-                                <h4 class="shop-sidebar-title">Food Category </h4>
+                                <h4 class="shop-sidebar-title">Категорії страв: </h4>
                                  <div class="shop-list-style mt-20">
                                     <ul>
-                                        <li><a href="{{route('food-shop/shop-page')}}">All food</a></li>
-                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>1])}}">First dish</a></li>
-                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>2])}}">Second dish</a></li>
-                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>3])}}">Drinks</a></li>
-                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>4])}}">Deserts</a></li>
-                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>5])}}">Souses</a></li>
+                                        <li><a href="{{route('food-shop/shop-page')}}">Всі страви</a></li>
+                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>1])}}">Перша страва</a></li>
+                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>2])}}">Друга страва</a></li>
+                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>3])}}">Напої</a></li>
+                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>4])}}">Десерти</a></li>
+                                        <li><a href="{{route('food-shop/shop-page', ['id_category'=>5])}}">Соуси</a></li>
                                     </ul>
                                 </div>
                             </div>

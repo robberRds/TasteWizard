@@ -21,43 +21,42 @@ Route::prefix('food-shop')->group(function () {
     Route::get('/users', function () {
         // Matches The "/admin/users" URL
     });
+    Route::get('shop-page', [\App\Http\Controllers\ProductController::class, 'shopList'])
+        ->name('food-shop/shop-page');
+
+    Route::get('index', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
+        ->name('food-shop/index');
+
+    Route::get('product-details', [\App\Http\Controllers\ProductController::class, 'productDetails'])
+        ->name('food-shop/product-details');
+
+    Route::get('contact', [\App\Http\Controllers\ProductController::class, 'contact'])
+        ->name('food-shop/contact');
+
+    Route::get('about', [\App\Http\Controllers\ProductController::class, 'about'])
+        ->name('food-shop/about');
+
+    Route::get('add-cart', [\App\Http\Controllers\ProductController::class, 'addCart'])
+        ->name('food-shop/add-cart')->middleware('auth');
+
+    Route::get('delete-cart', [\App\Http\Controllers\ProductController::class, 'deleteCart'])
+        ->name('food-shop/delete-cart')->middleware('auth');
+
+    Route::get('checkout', [\App\Http\Controllers\ProductController::class, 'checkout'])
+        ->name('food-shop/checkout')->middleware('auth');
+
+    Route::get('my-account', [\App\Http\Controllers\ProductController::class, 'profile'])
+        ->name('food-shop/my-account')->middleware('auth');
+
+    Route::post('make-order', [\App\Http\Controllers\ProductController::class, 'makeOrder'])
+        ->name('food-shop/make-order')->middleware('auth');
+
+    Route::post('search', [\App\Http\Controllers\ProductController::class, 'search'])
+        ->name('food-shop/search');
 });
 
 Route::get('/', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
     ->name('food-shop/index');
-
-Route::get('food-shop/shop-page', [\App\Http\Controllers\ProductController::class, 'shopList'])
-    ->name('food-shop/shop-page');
-
-Route::get('food-shop/index', [\App\Http\Controllers\ProductController::class, 'shopIndex'])
-    ->name('food-shop/index');
-
-Route::get('food-shop/product-details', [\App\Http\Controllers\ProductController::class, 'productDetails'])
-    ->name('food-shop/product-details');
-
-Route::get('food-shop/contact', [\App\Http\Controllers\ProductController::class, 'contact'])
-    ->name('food-shop/contact');
-
-Route::get('food-shop/about', [\App\Http\Controllers\ProductController::class, 'about'])
-    ->name('food-shop/about');
-
-Route::get('food-shop/add-cart', [\App\Http\Controllers\ProductController::class, 'addCart'])
-    ->name('food-shop/add-cart')->middleware('auth');
-
-Route::get('food-shop/delete-cart', [\App\Http\Controllers\ProductController::class, 'deleteCart'])
-    ->name('food-shop/delete-cart')->middleware('auth');
-
-Route::get('food-shop/checkout', [\App\Http\Controllers\ProductController::class, 'checkout'])
-    ->name('food-shop/checkout')->middleware('auth');
-
-Route::get('food-shop/my-account', [\App\Http\Controllers\ProductController::class, 'profile'])
-    ->name('food-shop/my-account')->middleware('auth');
-
-Route::post('food-shop/make-order', [\App\Http\Controllers\ProductController::class, 'makeOrder'])
-    ->name('food-shop/make-order')->middleware('auth');
-
-Route::post('food-shop/search', [\App\Http\Controllers\ProductController::class, 'search'])
-    ->name('food-shop/search');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

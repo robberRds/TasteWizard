@@ -15,10 +15,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>Contact Us</h2>
+                    <h2>Контакти</h2>
                     <ul>
-                        <li><a href="{{route('food-shop/index')}}">home</a></li>
-                        <li class="active">Contact Us</li>
+                        <li><a href="{{route('food-shop/index')}}">Головна</a></li>
+                        <li class="active">Контакти</li>
                     </ul>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                                 <i class="ti-location-pin"></i>
                             </div>
                             <div class="contact-info-content">
-                                <h4>Our Location</h4>
+                                <h4>Наша локація</h4>
                                 <p>012 345 678 / 123 456 789</p>
                                 <p><a href="#">ihorbalitsky@gmail.com</a></p>
                             </div>
@@ -44,9 +44,9 @@
                                 <i class="ti-mobile"></i>
                             </div>
                             <div class="contact-info-content">
-                                <h4>Contact us Anytime</h4>
+                                <h4>Зв'яжіться з нами в будь-який час</h4>
                                 <p>Mobile: +38 098 133 3579</p>
-                                <p>Fax: 098 133 3579</p>
+                                <p>Fax: 132 133</p>
                             </div>
                         </div>
                     </div>
@@ -56,7 +56,7 @@
                                 <i class="ti-email"></i>
                             </div>
                             <div class="contact-info-content">
-                                <h4>Write Some Words</h4>
+                                <h4>Напишіть кілька слів</h4>
                                 <p><a href="#">ihor.bali@mail.ru </a></p>
                                 <p><a href="#">ihorbalitsky@gmail.com</a></p>
                             </div>

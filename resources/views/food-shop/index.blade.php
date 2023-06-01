@@ -17,10 +17,10 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12 col-sm-7">
                                 <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">Welcome to our institution ♥</h3>
-                                    <h1 class="animated">Food & drinks <br>To ALL!!!</h1>
+                                    <h3 class="animated">Ласкаво просимо до нашого закладу ♥</h3>
+                                    <h1 class="animated">Їжа & напої <br>Для всіх!!!</h1>
                                     <div class="slider-btn">
-                                        <a class="animated" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
+                                        <a class="animated" href="{{route('food-shop/shop-page')}}">КУПИТИ ЗАРАЗ</a>
                                     </div>
                                 </div>
                             </div>
@@ -37,10 +37,10 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-7 col-12">
                                 <div class="slider-content slider-animated-1 pt-114">
-                                    <h3 class="animated">We are glad that you visited us.</h3>
-                                    <h1 class="animated">Welcome!!!</h1>
+                                    <h3 class="animated">Ми раді, що ви завітали до нас</h3>
+                                    <h1 class="animated">Ласкаво просимо!!!</h1>
                                     <div class="slider-btn">
-                                        <a class="animated" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
+                                        <a class="animated" href="{{route('food-shop/shop-page')}}">КУПИТИ ЗАРАЗ</a>
                                     </div>
                                 </div>
                             </div>
@@ -63,7 +63,7 @@
                                 <img src="../../../public/img/myimg/borch.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>First & Second Food</h3>
+                                <h3>Перша та другі страви</h3>
                             </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                                 <img src="../../../public/img/myimg/kava.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>Drinks</h3>
+                                <h3>Напої</h3>
                             </div>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                                 <img src="../../../public/img/myimg/tort.png" alt="">
                             </div>
                             <div class="single-food-content">
-                                <h3>Deserts</h3>
+                                <h3>Десерти</h3>
                             </div>
                         </div>
                     </div>
@@ -93,8 +93,8 @@
         <div class="product-area pt-95 pb-70 gray-bg">
             <div class="container">
                 <div class="section-title text-center mb-55">
-                    <h4>Most Populer</h4>
-                    <h2>Recent Products</h2>
+                    <h4>Найбільш популярні</h4>
+                    <h2>Останні страви</h2>
                 </div>
                 <div class="row">
                     @foreach($randProducts as $randProduct)
@@ -119,7 +119,7 @@
                                 <h4><a href="{{route('food-shop/product-details', ['id'=>$randProduct->id])}}">
                                         {{$randProduct->name}}</a></h4>
                                 <div class="product-price">
-                                    <span>Ціна: {{$randProduct->price}} </span>
+                                    <span>Ціна: {{$randProduct->price}} ₴</span>
                                 </div>
                             </div>
                         </div>
@@ -131,8 +131,8 @@
         <div class="deal-area bg-img pt-95 pb-100">
             <div class="container">
                 <div class="section-title text-center mb-50">
-                    <h4>Best Product</h4>
-                    <h2>Deal of the Week</h2>
+                    <h4>Найкраща страва</h4>
+                    <h2>За останній тиждень</h2>
                 </div>
                 <div class="row">
                     @foreach($product as $item)
@@ -145,14 +145,14 @@
                         <div class="deal-content">
                             <h3><a href="#">{{$item->name}}</a></h3>
                             <div class="deal-pro-price">
-                                <span>Ціна: {{$item->price}}</span>
+                                <span>Ціна: {{$item->price}}₴</span>
                             </div>
                             <p>{{$item->description}}</p>
                             <div class="timer timer-style">
                                 <div data-countdown="2017/10/01"></div>
                             </div>
                             <div class="discount-btn mt-35">
-                                <a class="btn-style" href="{{route('food-shop/shop-page')}}">SHOP NOW</a>
+                                <a class="btn-style" href="{{route('food-shop/shop-page')}}">КУПИТИ ЗАРАЗ</a>
                             </div>
                         </div>
                     </div>
@@ -166,22 +166,22 @@
 		            <div class="col-lg-4 col-md-4">
 		                <div class="service-content text-center mb-30 service-color-1">
 		                    <img src="../../../public/img/icon-img/shipping.png" alt="">
-		                    <h4>FREE SHIPPING</h4>
-		                    <p>Free shipping on all order </p>
+		                    <h4>БЕЗКОШТОВНА ДОСТАВКА</h4>
+		                    <p>Безкоштовна доставка від 350грн</p>
 		                </div>
 		            </div>
 		            <div class="col-lg-4 col-md-4">
 		                <div class="service-content text-center mb-30 service-color-2">
 		                    <img src="../../../public/img/icon-img/support.png" alt="">
-		                    <h4>ONLINE SUPPORT</h4>
-		                    <p>Online support 24 hours a day</p>
+		                    <h4>ОНЛАЙН ПІДТРИМКА</h4>
+		                    <p>Онлайн підримка 24/7</p>
 		                </div>
 		            </div>
 		            <div class="col-lg-4 col-md-4">
 		                <div class="service-content text-center mb-30 service-color-3">
 		                    <img src="../../../public/img/icon-img/money.png" alt="">
-		                    <h4>MONEY RETURN</h4>
-		                    <p>Back guarantee under 5 days</p>
+		                    <h4>ПОВЕРНЕННЯ ГРОШЕЙ</h4>
+		                    <p>Гарантоване повернення на протязі 3 днів</p>
 		                </div>
 		            </div>
 		        </div>

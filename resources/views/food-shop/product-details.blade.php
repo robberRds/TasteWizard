@@ -15,10 +15,10 @@
         <div class="breadcrumb-area pt-95 pb-95 bg-img" style="background-image:url(../../../public/img/myimg/board.png);">
             <div class="container">
                 <div class="breadcrumb-content text-center">
-                    <h2>Product Details</h2>
+                    <h2>Детально про страву</h2>
                     <ul>
-                        <li><a href="{{route('food-shop/index')}}">home</a></li>
-                        <li class="active">Product Details</li>
+                        <li><a href="{{route('food-shop/index')}}">Головна</a></li>
+                        <li class="active">Опис</li>
                     </ul>
                 </div>
             </div>
@@ -36,14 +36,14 @@
                         <div class="product-details-content">
                             <h1>{{$item->name}}</h1>
                             <div class="product-price">
-                                <h4>Ціна: {{$item->price}}</h4>
+                                <h4>Ціна: {{$item->price}}₴</h4>
                             </div>
                             <br/><br/><br/>
                             <div class="product-list-action">
                                 <div class="product-list-action-left">
                                     <a class="addtocart-btn" href="{{route('food-shop/add-cart', ['id'=>$item->id, 'sold'=>$item->sold])}}" title="Add to cart">
                                         <i class="ion-bag"></i>
-                                        Add to cart
+                                        Добавити в корзину
                                     </a>
                                 </div>
                                 <div class="product-list-action-right">
@@ -70,7 +70,7 @@
             <div class="container">
                 <div class="description-review-wrapper gray-bg pt-40">
                     <div class="description-review-topbar nav text-center">
-                        <a class="active" data-toggle="tab" href="#des-details1">DESCRIPTION</a>
+                        <a class="active" data-toggle="tab" href="#des-details1">ОПИС</a>
                     </div>
                     <div class="tab-content description-review-bottom">
                         <div id="des-details1" class="tab-pane active">
